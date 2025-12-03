@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Caio Lopes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <ul>
+            <li><a href="#sobre">Sobre Mim</a></li>
+            <li><a href="#formacao">Formação</a></li>
+            <li><a href="#portfolio">Portfólio</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <section id="sobre">
+        <h1>Sobre Mim</h1>
+        <br>
+        <p>
+        Olá! Me chamo <strong>Caio</strong>, tenho 29 anos. Sou natural de Juiz de Fora (MG), mas atualmente moro em Conselheiro Lafaiete (MG). 
+        Desde os 5 anos me interesso pelo universo dos games e tecnologia, tendo meu primeiro contato aprofundado com computadores aos 17 anos.
+        </p>
+        <br>
+        <p>
+        Em 2013, tentei iniciar os estudos em Java, mas encontrei dificuldades com materiais na época. Após um período de pausa, retomei o foco técnico aos 26 anos. 
+        Participei do treinamento de <strong>Computação em Nuvem (AWS)</strong> pela empresa Capgemini, o que reacendeu minha paixão pela programação. 
+        Na sequência, dediquei um ano ao estudo de <strong>Python</strong> e iniciei o curso superior de Tecnologia em Banco de Dados na UNINTER em Janeiro de 2025.
+        </p>
+        <br>
+        <p>
+        Embora meu foco inicial fosse Banco de Dados, hoje possuo um interesse abrangente em TI, incluindo Desenvolvimento Web, Mobile, Cibersegurança e Cloud Computing. 
+        Tenho uma forte curiosidade analítica sobre o funcionamento dos sistemas ("back-end"). 
+        Atualmente, aplico esses conhecimentos na prática: <strong>desenvolvi um aplicativo de gestão para oficinas automotivas</strong>, que já se encontra em fase de testes (versão 1.05).
+        </p>
+        </section>
+
+    <section id="formacao">
+        <h2>Formação</h2>
+        <div class="container-cards">
+        
+        <div class="card">
+            <h3>Supervisor de TI (Profissionalizante)</h3>
+            <p><strong>Curso:</strong> Montagem e manutenção de computadores e redes</p>
+            <p>Microlins - Concluído em Dez/2013</p>
+        </div>
+
+        <div class="card">
+            <h3>Computação em Nuvem (AWS)</h3>
+            <p><strong>Curso:</strong> Fundamentos de Cloud</p>
+            <p>Capgemini - Concluído em Set/2022</p>
+        </div>
+
+        <div class="card">
+            <h3>Banco de Dados</h3>
+            <p><strong>Curso:</strong> Tecnólogo Superior</p>
+            <p>UNINTER - Em curso</p>
+        </div>
+
+    </div>
+        </section>
+
+    <section id="portfolio">
+        <h2>Portfólio</h2>
+        <br>
+        <div class="container-cards">
+        <div class="card largo">
+            <br>
+            <h3>Projeto Gerenciamento de mecânica </h3>
+            <br>
+            <p>Este projeto nasceu da identificação de uma lacuna no mercado regional: a ausência de softwares especializados para oficinas mecânicas, que acabam dependendo de gestores genéricos.
+                Desenvolvi a solução como parte do meu Trabalho Extensionista acadêmico, focando nas rotinas comerciais e industriais do setor.
+                O sistema teve excelente aceitação e encontra-se em fase de testes.
+                O lançamento oficial para o público está previsto para fevereiro de 2026, operando no modelo de assinatura mensal (SaaS). </p>
+            <a href="https://github.com/caio17lopes/Oficina-"class="btn-projeto" target="_blank">Ver no GitHub</a>
+            <a href="https://drive.google.com/file/d/1kppv9iMmkfzJia0Wx3luPUKZiE7oNhIV/view?usp=drive_link" class="btn-projeto btn-teste" target="_blank">Baixar Demo (v1.05)</a>
+        </div>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <form id="formContato">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="usuario@dominio.com">
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem"></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Caitech - Desenvolvido por Caio Lopes</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

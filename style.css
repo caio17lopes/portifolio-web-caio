@@ -1,0 +1,185 @@
+/* style.css */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html {
+    /*  Garante que o link não esconda o título atrás do menu */
+    scroll-padding-top: 100px;
+    scroll-behavior: smooth;
+}
+
+/* --- ESTILO DO MENU --- */
+nav {
+    background-color: #333;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    /* Sombra suave para destacar o menu do fundo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Garante alinhamento vertical */
+    padding: 1rem;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #7eacf6; /* Azul Tech Claro */
+}
+
+/* --- ESTRUTURA GERAL --- */
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('imagerns/tech1.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center center;
+    color: white;
+    padding-top: 80px; /* Empurra o conteúdo para não ficar atrás do menu logo de cara */
+}
+
+/* Configuração das Caixas */
+section, .card, form {
+    background-color: rgba(0, 0, 0, 0.85); /* Fundo escuro transparente */
+    border-radius: 10px;
+    padding: 30px;
+    margin: 40px auto; /* Espaçamento externo */
+    max-width: 900px;  /* Largura máxima de leitura */
+    border: 1px solid #333;
+}
+
+/* Ajuste específico para garantir a âncora correta */
+section {
+    scroll-margin-top: 100px; /* Reforço para o scroll parar no lugar certo */
+}
+
+/* Texto Sobre Mim */
+#sobre p {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 15px;   
+}
+
+/* --- CARDS (Formação e Portfólio) --- */
+.container-cards {
+    display: flex;           
+    justify-content: center; 
+    flex-wrap: wrap;       
+    gap: 30px;              
+    margin-top: 20px;
+}
+
+.card {
+    
+    border: 1px solid hsl(223, 70%, 61%);            
+    width: 300px;                         
+    text-align: center;                   
+    transition: transform 0.3s, box-shadow 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+}
+
+.card:hover {
+    
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.95);
+    box-shadow: 0 0 15px hsl(223, 70%, 61%); /* Efeito neon ao passar o mouse */
+}
+
+.card h3 {
+    color: hsl(223, 70%, 61%);
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+}
+
+/* --- FORMULÁRIO --- */
+form {
+    max-width: 500px;
+}
+
+input, textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #222; /* Input escuro para combinar com o tema */
+    color: white;
+    width: 100%; /* Garante que preencha a caixa */
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* --- BOTÕES DO PORTFÓLIO --- */
+.btn-projeto {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: hsl(223, 70%, 61%);
+    color: white;
+    border: 1px solid hsl(223, 70%, 61%);
+    transition: all 0.3s;
+}
+
+.btn-projeto:hover {
+    background-color: white;
+    color: black;
+    transform: translateY(-2px); /* Leve subida ao passar o mouse */
+}
+/* Classe especial para cards com muito texto */
+.card.largo {
+    width: 600px;   
+    max-width: 90%;    /* Garante que não estoure a tela em celulares */
+}
+
+.card.largo p {
+    text-align: justify; 
+    line-height: 1.6;
+}
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #222; 
+    color: #888;            
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
