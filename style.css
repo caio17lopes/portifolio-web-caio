@@ -106,7 +106,7 @@ section {
     
     transform: scale(1.05);
     background-color: rgba(0, 0, 0, 0.95);
-    box-shadow: 0 0 15px hsl(223, 70%, 61%); /* Efeito neon ao passar o mouse */
+    box-shadow: 0 0 15px hsl(223, 70%, 61%); 
 }
 
 .card h3 {
@@ -125,9 +125,9 @@ input, textarea {
     padding: 12px;
     border: 1px solid #555;
     border-radius: 5px;
-    background-color: #222; /* Input escuro para combinar com o tema */
+    background-color: #222; 
     color: white;
-    width: 100%; /* Garante que preencha a caixa */
+    width: 100%; 
 }
 
 button {
@@ -163,12 +163,12 @@ button:hover {
 .btn-projeto:hover {
     background-color: white;
     color: black;
-    transform: translateY(-2px); /* Leve subida ao passar o mouse */
+    transform: translateY(-2px); 
 }
 /* Classe especial para cards com muito texto */
 .card.largo {
     width: 600px;   
-    max-width: 90%;    /* Garante que não estoure a tela em celulares */
+    max-width: 90%;    
 }
 
 .card.largo p {
@@ -177,13 +177,12 @@ button:hover {
 }
 /* --- TEMA CLARO (LIGHT MODE) --- */
 
-/* Estilo do botão simplificado */
 #btnTema {
     background: transparent;
     border: 1px solid white;
     padding: 5px 10px;
     cursor: pointer;
-    border-radius: 50%; /* Redondinho */
+    border-radius: 50%; 
     font-size: 1.2rem;
     transition: transform 0.3s;
     
@@ -198,7 +197,7 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
-/* --- REGRAS DO MODO CLARO (Essas você mantém iguais) --- */
+/* --- REGRAS DO MODO CLARO --- */
 body.light-mode {
     background-image: linear-gradient(rgba(255,255,255,0),rgba(255, 255, 255, 0.9)), url('imagens/tech1.jpg'); 
     background-color: #f0f2f5; 
@@ -230,7 +229,7 @@ body.light-mode nav a {
     color: #333;
 }
 body.light-mode #btnTema {
-    border-color: #333; /* Borda escura no modo claro */
+    border-color: #333; 
 }
 footer {
     text-align: center;
@@ -245,16 +244,16 @@ footer {
     
     
     nav ul {
-        flex-wrap: wrap; /* Se não couber, joga pra linha de baixo */
+        flex-wrap: wrap; 
         padding: 0.5rem;
     }
 
     nav ul li {
-        margin: 5px; /* Diminui o espaço entre os links */
+        margin: 5px; 
     }
 
     nav a {
-        font-size: 0.9rem; /* Diminui um pouco a letra do menu */
+        font-size: 0.9rem; 
     }
 
     /* 2. Ajusta o Botão de Tema para ficar acessível */
