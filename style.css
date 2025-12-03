@@ -271,7 +271,7 @@ footer {
     
     /* 4. Diminui as margens laterais para aproveitar espaço */
     section, .card, form {
-        padding: 20px 15px; /
+        padding: 20px 15px; 
         margin: 20px 10px;  
         width: auto;        
     }
