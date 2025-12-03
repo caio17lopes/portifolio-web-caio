@@ -1,38 +1,47 @@
 // script.js
 
-// Seleciona o formulário pelo ID
+// --- PARTE 1: FORMULÁRIO ---
 const formulario = document.getElementById('formContato');
 
-// Adiciona um evento de 'submit' (envio) ao formulário
-formulario.addEventListener('submit', function(event) {
-    // Previne o envio padrão do formulário (recarregar a página)
-    event.preventDefault();
+// Só adiciona o evento se o formulário existir na página
+if (formulario) {
+    formulario.addEventListener('submit', function(event) {
+        event.preventDefault();
 
-    // Captura os valores dos campos
-    const nome = document.getElementById('nome').value;
-    const email = document.getElementById('email').value;
-    const mensagem = document.getElementById('mensagem').value;
+        const nome = document.getElementById('nome').value;
+        const email = document.getElementById('email').value;
+        const mensagem = document.getElementById('mensagem').value;
 
-    // Validação 1: Campos Vazios [cite: 58]
-    if (nome === '' || email === '' || mensagem === '') {
-        alert('Por favor, preencha todos os campos.');
-        return; // Para a execução aqui se houver erro
-    }
+        // Validação
+        if (nome === '' || email === '' || mensagem === '') {
+            alert('Por favor, preencha todos os campos.');
+            return;
+        }
 
-    // Validação 2: Formato de E-mail simples (Verifica se tem @ e .) [cite: 59]
-    // Nota: Regex é melhor, mas uma verificação simples costuma ser aceita se explicada.
-    if (!email.includes('@') || !email.includes('.')) {
-        alert('Por favor, insira um e-mail válido.');
-        return;
-    }
+        if (!email.includes('@') || !email.includes('.')) {
+            alert('Por favor, insira um e-mail válido.');
+            return;
+        }
 
-    // Simulação de Envio [cite: 60]
-    // Exibe mensagem de sucesso
-    alert('Mensagem enviada com sucesso! Obrigado, ' + nome + '.');
+        // Sucesso
+        alert('Mensagem enviada com sucesso! Obrigado, ' + nome + '.');
+        formulario.reset();
+    });
+}
 
-    // Limpa os campos do formulário
-    formulario.reset();
-});
+// --- PARTE 2: TEMA CLARO/ESCURO ---
+const btnTema = document.getElementById('btnTema');
+const body = document.body;
 
-// Comentário explicativo: Este script garante que o usuário não envie dados em branco
-// e receba um feedback visual imediato.
+// Proteção: Só tenta adicionar o clique se o botão realmente existir
+if (btnTema) {
+    btnTema.addEventListener('click', function() {
+        body.classList.toggle('light-mode');
+
+        if (body.classList.contains('light-mode')) {
+            btnTema.textContent = '🌙'; 
+        } else {
+            btnTema.textContent = '☀️'; 
+        }
+    });
+}
